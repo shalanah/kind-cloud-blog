@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `kind cloud notes 📝`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Shalanah Dawson`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Articles and updates about the Kind Cloud app, meditation, loving-kindness, and more`,
+    siteUrl: `https://blog.kindcloud.app`,
   },
   plugins: [
     `gatsby-plugin-image`,
