@@ -12,28 +12,26 @@ But why do we need another?
 
 Kind Cloud is different. It is sound-free by design.
 
-## Sound-free benefits
+### Sound-free benefits
 
-### Go at your own indvidual pace ⭐️
+#### Go at your own pace ⭐️
 
 Most meditations involve listening to someone else guide you.
 
-They might be great at pausing at the exact right time and have selected the perfect background music to keep you focused. But for some, the timing is a bit off, and not with their own individual rhythm.
+They might be great at pausing at the exact right time and have selected the perfect background music to keep you focused. But, for some, the timing is a bit off, and not with their own individual rhythm.
 
 Kind Cloud allows you to move on exactly when you're ready.
 
 Go as slowly or as quickly as you'd like.
 
-No judgement here.
+#### For individuals with noise sensitivity ⭐️
 
-### Helpful for deaf and hard of hearing individuals or those with noise sensitivities 🔇
+Finding a voice and background sounds that suits your tastes can take time. Remove it from the equation entirely with text.
+
+#### For deaf and hard of hearing individuals ⭐️
 
 Audio can be a challenge for many, and completely inaccessible for others. Kind Cloud is your meditation companion.
 
 ### I hope you find a meditation app that works for you! 🌈
 
-May you be filled with loving-kindness. 💙
-
-\- Kind Cloud ⛅️
-
-A sound-free, compassion-building meditation app [kindcloud.app](kindcloud.app)
+Whether it is [Kind Cloud](kindcloud.app) or not, I hope you find a way to incorporate meditation into your life.

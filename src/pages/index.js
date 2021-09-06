@@ -6,47 +6,33 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <ol style={{ listStyle: `none` }}>
+      <ol
+        style={{
+          listStyle: `none`,
+          display: "grid",
+          gap: 40,
+          gridTemplateRows: "auto",
+          gridTemplateColumns: "1fr 1fr",
+        }}
+      >
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           return (
             <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
+              <article>
                 <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
+                  <h2 style={{ marginTop: 0 }}>
+                    <Link to={post.fields.slug}>
+                      <span>{title} →</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <h5 style={{ textTransform: "none" }}>
+                    {post.frontmatter.date}
+                  </h5>
                 </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
               </article>
             </li>
           )

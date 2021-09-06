@@ -129,107 +129,6 @@ const boxSizing = `
   }
 `
 
-export const theme = {
-  drkBlue: {
-    default: true,
-    bg: "#12102c",
-    bgBreath: "#2c344b",
-    bgBreathHalo: "#2c344b",
-    opacityBreathHalo: 0.4,
-    illustrationStroke: "#12102c",
-    step1CloudExtraFill: "#12102c",
-    step1CloudExtraStroke: "#2c344b",
-    text: "#a1cef7",
-    mainCloud: "#87aad5",
-    bgClouds: "#2b344d",
-    cheek: "#13142b",
-    radioBg: "#2b344d",
-    radioText: "#a1cef7",
-    radioCheckedBg: "#87aad5",
-    radioCheckedText: "#000",
-    features: "#12102c",
-    titleOpacity: 0.7,
-    navLinkBorder: "#2b344d",
-    pill: "#2b344d",
-    pillDone: "#a1cef799",
-    light: false,
-  },
-}
-
-const floatTarget = `
-  .floatTarget {
-    pointer-events: all;
-    cursor: pointer;
-  }
-`
-
-const heart = `
-  .heart {
-    pointer-events: none;
-    visibility: hidden;
-    position: absolute;
-    z-index: 100;
-    &:before,
-    &:after {
-      position: absolute;
-      content: '';
-      left: 5vmin;
-      top: 0;
-      width: 5vmin;
-      height: 8vmin;
-      background: currentColor;
-      border-radius: 5vmin 5vmin 0 0;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-    }
-    &:after {
-      left: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
-    }
-  }
-`
-
-const makeTheme = name => {
-  return `
-    :root {
-    --main-bg: ${theme[name].bg};
-    --homepage-bg: ${theme[name].bg};
-    --main-text: ${theme[name].text};
-    --title-opacity: ${theme[name].titleOpacity};
-    --menu-btn-border: ${theme[name].mainCloud};
-    --menu-btn-hover-bg: ${theme[name].mainCloud};
-    --kind-cloud-cheeks: ${theme[name].cheek};
-    --kind-cloud-bg-clouds: ${theme[name].bgClouds};
-    --illustration-bg: ${theme[name].mainCloud};
-    --illustration-fleck: ${theme[name].fleck || theme[name].mainCloud};
-    --illustration-facial-eyes: ${
-      theme[name].eyes || theme[name].features
-    }; // eyes, mouth
-    --illustration-facial-mouth: ${theme[name].mouth || theme[name].features};
-    --illustration-stroke: ${theme[name].illustrationStroke};
-    --radio-checked-text: ${theme[name].radioCheckedText};
-    --radio-checked-bg: ${theme[name].radioCheckedBg};
-    --radio-bg: ${theme[name].radioBg};
-    --radio-text: ${theme[name].radioText};
-    --breath-circle-bg: ${theme[name].bgBreath};
-    --breath-circle-halo-bg: ${theme[name].bgBreathHalo};
-    --breath-circle-halo-opacity: .4;
-    --step-1-cloud-extra-fill: ${theme[name].step1CloudExtraFill};
-    --step-1-cloud-extra-stroke: ${theme[name].step1CloudExtraStroke};
-    --nav-link-border: ${theme[name].navLinkBorder};
-    --pill: ${theme[name].pill};
-    --pill-done: ${theme[name].pillDone};
-  }
-  `
-}
-
-const colors = `
-  ${Object.keys(theme)
-    .map(name => makeTheme(name))
-    .join("")}
-`
-
 const removeTapHighlight = `
   body {
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
@@ -239,11 +138,9 @@ const removeTapHighlight = `
 export const StyleGlobals = createGlobalStyle`
   ${meyerReset}
   ${positioning}
-  ${colors}
   ${boxSizing}
   ${removeTapHighlight}
   ${formResets}
-  ${floatTarget}
   ${buttonReset}
   .pointer-events-none-important {
     pointer-events: none !important;
@@ -263,28 +160,23 @@ export const StyleGlobals = createGlobalStyle`
     text-decoration: none;
     color: currentColor;
   }
-  ${heart}
   body {
+    font-weight: 100;
     font-size: 2rem;
-    background: var(--main-bg) !important;
-    color: var(--main-text) !important;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  header {
-    width: 100% !important;
-    height: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    background: #12112A;
+    /* color: #D0E7FF; */
+    color: #A9CDF3;
+    font-family: strokeweight;
+    line-height: 1.45;
   }
   h1,h2,h3,h4,h5,h6 {
-    font-family: strokeweight;
-    font-weight: 700;
+    font-weight: 160;
     margin-top: 1rem;
+    text-transform: lowercase;
   }
-  
   p {
-    
-    margin-top: 1rem;
+    font-size: 1.8rem;
+    margin-top: 2rem;
     a {
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -293,18 +185,33 @@ export const StyleGlobals = createGlobalStyle`
       color: #fff;
     }
   }
-  }
+}
   h1 {
-    font-size: 5rem;
+    font-size: 3.75rem;
+    max-width: 700px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  p {
+    + h3, + h4 {
+      margin-top: 5rem;
+    }
   }
   h3 {
-    font-size:2.5rem;
+    font-size:3rem;
+    text-transform: none;
   }
-  h4, h5, h6 {
-    font-size: 2rem;
+  h4  {
+    font-size: 2.5rem;
+    text-transform: none;
+  }
+  h5, h6 {
+    font-size: 1.5rem;
+    text-transform: none;
   }
 `
 

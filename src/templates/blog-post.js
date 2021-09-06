@@ -13,45 +13,52 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article itemScope>
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <h1>{post.frontmatter.title}</h1>
+          <h5
+            style={{
+              textTransform: "none",
+              marginBottom: "4.5rem",
+              marginTop: "1.5rem",
+            }}
+          >
+            {post.frontmatter.date}
+          </h5>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        <hr />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <p>
+          May you be filled with loving-kindness. 💙
+          <br />- Kind Cloud
+        </p>
       </article>
-      <nav className="blog-post-nav">
+      <nav>
         <ul
           style={{
+            marginTop: "8rem",
             display: `flex`,
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
+            fontSize: 22,
+            textTransform: "none",
           }}
         >
-          <li>
+          <li style={{ flex: 1 }}>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
-            {next && (
+          {next && (
+            <li style={{ flex: 1, textAlign: "right" }}>
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
-            )}
-          </li>
+            </li>
+          )}
         </ul>
       </nav>
     </Layout>

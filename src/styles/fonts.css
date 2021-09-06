@@ -1,0 +1,18 @@
+@font-face {
+  font-family: strokeweight;
+  src: url("/strokeweight-060.woff2") format("woff2"),
+    url("/strokeweight-060.woff") format("woff");
+  font-weight: 60;
+}
+@font-face {
+  font-family: strokeweight;
+  src: url("/strokeweight-100.woff2") format("woff2"),
+    url("/strokeweight-100.woff") format("woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: strokeweight;
+  src: url("/strokeweight-140.woff2") format("woff2"),
+    url("/strokeweight-140.woff") format("woff");
+  font-weight: 140;
+}
