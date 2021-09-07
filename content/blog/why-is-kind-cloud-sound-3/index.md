@@ -2,6 +2,18 @@
 title: "Why is Kind Cloud Sound-Free? 🔇"
 description: "Sound-free is the key"
 date: "2020-03-18T05:35:07.322Z"
+tags:
+  - "kindcloud"
+  - "kind cloud"
+  - "sound-free"
+  - "soundless"
+  - "silent"
+  - "text only"
+  - "meditation"
+  - "loving-kindness"
+  - "deaf"
+  - "hard of hearing"
+  - "noise sensitivities"
 ---
 
 There are lots of meditation apps out there, and with good reason.
@@ -33,5 +45,3 @@ Finding a voice and background sounds that suits your tastes can take time. Remo
 Audio can be a challenge for many, and completely inaccessible for others. Kind Cloud is your meditation companion.
 
 ### I hope you find a meditation app that works for you! 🌈
-
-Whether it is [Kind Cloud](kindcloud.app) or not, I hope you find a way to incorporate meditation into your life.

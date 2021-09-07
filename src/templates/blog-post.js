@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article itemScope>
+      <article>
         <header>
           <h1>{post.frontmatter.title}</h1>
           <h5
@@ -30,6 +30,11 @@ const BlogPostTemplate = ({ data, location }) => {
         <p>
           May you be filled with loving-kindness. 💙
           <br />- Kind Cloud
+        </p>
+        <p>
+          {post.frontmatter.tags.map(tag => (
+            <span>{tag}</span>
+          ))}
         </p>
       </article>
       <nav>
@@ -86,6 +91,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

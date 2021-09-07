@@ -2,6 +2,18 @@
 title: "Why is Kind Cloud Sound-Free? 🔇"
 description: "Sound-free is the key"
 date: "2020-03-18T05:35:07.322Z"
+tags:
+  - "kindcloud"
+  - "kind cloud"
+  - "sound-free"
+  - "soundless"
+  - "silent"
+  - "text only"
+  - "meditation"
+  - "loving-kindness"
+  - "deaf"
+  - "hard of hearing"
+  - "noise sensitivities"
 ---
 
 There are lots of meditation apps out there, and with good reason.

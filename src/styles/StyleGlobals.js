@@ -102,6 +102,10 @@ const positioning = `
     width: 100%;
     height: 100%;
   }
+  #___gatsby, #gatsby-focus-wrapper {
+    width: 100%;
+    height: 100%;
+  }
   .pos-full {
     position: absolute;
     width: 100%;
