@@ -2,6 +2,23 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import styled, { keyframes } from "styled-components"
+
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+   opacity: 1;
+   transform: translateY(0px);
+  }
+`
+
+const Article = styled.article`
+  opacity: 0;
+  animation: ${fadeUp} ease-out 0.8s 650ms both;
+`
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -13,7 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
+      <Article>
         <header>
           <h1>{post.frontmatter.title}</h1>
           <h5
@@ -31,12 +48,24 @@ const BlogPostTemplate = ({ data, location }) => {
           May you be filled with loving-kindness. 💙
           <br />- Kind Cloud
         </p>
-        <p>
+        <p style={{ marginTop: 100 }}>
+          <span style={{ marginBottom: 20, display: "block" }}>Tags</span>
           {post.frontmatter.tags.map(tag => (
-            <span>{tag}</span>
+            <button
+              style={{
+                fontSize: "1.1rem",
+                marginRight: 15,
+                border: "1px solid currentColor",
+                padding: ".4em 1em .5em",
+                marginBottom: ".75em",
+                borderRadius: "20px",
+              }}
+            >
+              <span style={{ whiteSpace: "nowrap" }}>{tag}</span>
+            </button>
           ))}
         </p>
-      </article>
+      </Article>
       <nav>
         <ul
           style={{

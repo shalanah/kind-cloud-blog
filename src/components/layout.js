@@ -2,12 +2,27 @@ import * as React from "react"
 import { Link } from "gatsby"
 import StyleGlobals from "../styles/StyleGlobals"
 import "../styles/fonts.css"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 const Container = styled.div`
   max-width: 900px;
   margin: 2rem auto;
   position: relative;
+`
+
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+   opacity: 1;
+   transform: translateY(0px);
+  }
+`
+
+const LinkContainer = styled.div`
+  animation: ${fadeUp} ease-out 0.8s 0ms both;
 `
 
 const BgSvg = () => (
@@ -69,7 +84,13 @@ const Layout = ({ location, title, children }) => {
       >
         <StyleGlobals />
         <header style={{ display: "flex", justifyContent: "space-between" }}>
-          <span>{!isRootPath && <Link to="/">← back to posts</Link>}</span>
+          <span>
+            {!isRootPath && (
+              <LinkContainer>
+                <Link to="/">← back to posts</Link>
+              </LinkContainer>
+            )}
+          </span>
           <Link to="/">{title}</Link>
         </header>
         <main style={{ marginTop: "15vh", flex: 1 }}>{children}</main>
