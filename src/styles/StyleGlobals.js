@@ -154,11 +154,12 @@ export const StyleGlobals = createGlobalStyle`
   }
   html, body, button {
     font-family: strokeweight, sans-serif;
-    font-weight:  140;
+    font-weight:  100;
     line-height: 1.5;
   }
-  button {
-    font-weight:  60;
+  html, body {
+    height: 100%;
+    width: 100%;
   }
   a {
     text-decoration: none;
@@ -168,7 +169,6 @@ export const StyleGlobals = createGlobalStyle`
     font-weight: 100;
     font-size: 2rem;
     background: #12112A;
-    /* color: #D0E7FF; */
     color: #A9CDF3;
     font-family: strokeweight;
     line-height: 1.45;

@@ -11,6 +11,8 @@ tags:
   - "text only"
   - "meditation"
   - "loving-kindness"
+  - "loving kindness"
+  - "metta"
   - "deaf"
   - "hard of hearing"
   - "noise sensitivities"

@@ -42,12 +42,12 @@ const BlogIndex = ({ data, location }) => {
             >
               <article>
                 <header>
-                  <h2 style={{ marginTop: 0 }}>
+                  <h2 style={{ marginTop: 0, lineHeight: 1.35 }}>
                     <Link to={post.fields.slug}>
                       <span>{title} →</span>
                     </Link>
                   </h2>
-                  <h5 style={{ textTransform: "none" }}>
+                  <h5 style={{ textTransform: "none", fontWeight: "60" }}>
                     {post.frontmatter.date}
                   </h5>
                 </header>
