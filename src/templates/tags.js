@@ -7,22 +7,14 @@ import Posts from "../components/posts"
 // Following https://www.gatsbyjs.com/docs/adding-tags-and-categories-to-blog-posts/
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
-  console.log(data)
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
-  console.log({ tag })
-  console.log({ data })
-  console.log({ tag })
-  console.log({ edges })
+  const tagHeader = `Tag "${tag}" (${totalCount})`
   const posts = edges.map(({ node }) => node)
-  console.log(posts)
   return (
     <Layout location={location}>
       <>
         <Seo title={`Tag ${tag}`} />
-        <Posts posts={posts} />
+        <Posts posts={posts} title={tagHeader} />
         {/* Instead of an all tags page... just show all the tags here */}
         <Link to="/tags">All tags</Link>
       </>
