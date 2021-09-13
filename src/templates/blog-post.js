@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled, { keyframes } from "styled-components"
+import kebabCase from "lodash/kebabcase"
 
 const fadeUp = keyframes`
   from {
@@ -52,6 +53,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <span style={{ marginBottom: 20, display: "block" }}>Tags</span>
           {post.frontmatter.tags.map(tag => (
             <button
+              onClick={() => navigate(`/tags/${kebabCase(tag)}`)}
               style={{
                 fontSize: "1.1rem",
                 marginRight: 15,

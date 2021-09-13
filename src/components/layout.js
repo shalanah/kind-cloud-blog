@@ -25,7 +25,7 @@ const LinkContainer = styled.div`
   animation: ${fadeUp} ease-out 0.8s 0ms both;
 `
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   return (
@@ -51,13 +51,13 @@ const Layout = ({ location, title, children }) => {
               </LinkContainer>
             )}
           </span>
-          <Link to="/">{title}</Link>
+          <Link to="/">kindcloud.blog</Link>
         </header>
         <main style={{ marginTop: "15vh", flex: 1 }}>{children}</main>
         <footer
           style={{
             justifySelf: "end",
-            marginTop: "35vh",
+            marginTop: "max(25vh, 200px)",
             padding: "3rem 0 8rem ",
             fontSize: 24,
             fontWeight: "60",
