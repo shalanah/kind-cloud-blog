@@ -14,21 +14,60 @@ const fadeUp = keyframes`
 `
 const Li = styled.li`
   animation: ${fadeUp} ease-out 0.8s 0s both;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 3rem;
+  }
+`
+
+const Container = styled.div`
+  h1 {
+    font-size: 3.75rem;
+    max-width: 700px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 5rem;
+    text-transform: none;
+    @media screen and (max-width: 800px) {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    line-height: 1.35;
+    @media screen and (max-width: 800px) {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+  }
+  h5 {
+    text-transform: none;
+    font-weight: 60;
+    font-size: 1.5rem;
+    @media screen and (max-width: 800px) {
+      font-size: 1.25rem;
+      margin-top: 0;
+    }
+  }
+  ol {
+    list-style: none;
+    display: grid;
+    gap: 40;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
 `
 
 const Posts = ({ posts, title = "Kind Cloud Blog" }) => {
   return (
-    <>
-      <h1 style={{ marginBottom: "5rem", textTransform: "none" }}>{title}</h1>
-      <ol
-        style={{
-          listStyle: `none`,
-          display: "grid",
-          gap: 40,
-          gridTemplateRows: "auto",
-          gridTemplateColumns: "1fr 1fr",
-        }}
-      >
+    <Container>
+      <h1>{title}</h1>
+      <ol>
         {posts.map((post, i) => {
           const title = post.frontmatter.title || post.fields.slug
           return (
@@ -36,23 +75,17 @@ const Posts = ({ posts, title = "Kind Cloud Blog" }) => {
               key={post.fields.slug}
               style={{ animationDelay: (i + 1) * 300 + "ms" }}
             >
-              <article>
-                <header>
-                  <h2 style={{ marginTop: 0, lineHeight: 1.35 }}>
-                    <Link to={post.fields.slug}>
-                      <span>{title} →</span>
-                    </Link>
-                  </h2>
-                  <h5 style={{ textTransform: "none", fontWeight: "60" }}>
-                    {post.frontmatter.date}
-                  </h5>
-                </header>
-              </article>
+              <h2>
+                <Link to={post.fields.slug}>
+                  <span>{title} →</span>
+                </Link>
+              </h2>
+              <h5>{post.frontmatter.date}</h5>
             </Li>
           )
         })}
       </ol>
-    </>
+    </Container>
   )
 }
 

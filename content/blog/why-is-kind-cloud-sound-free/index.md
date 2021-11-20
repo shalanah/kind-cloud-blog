@@ -12,7 +12,6 @@ tags:
   - "meditation"
   - "loving-kindness"
   - "loving kindness"
-  - "metta"
   - "deaf"
   - "hard of hearing"
   - "noise sensitivities"
@@ -32,7 +31,7 @@ Kind Cloud is different. It is sound-free by design.
 
 Most meditations involve listening to someone else guide you.
 
-They might be great at pausing at the exact right time and have selected the perfect background music to keep you focused. But, for some, the timing is a bit off, and not with their own individual rhythm.
+They might be great at pausing at the exact right time and have selected the perfect background music to keep you focused. But, for some, the timing is a bit off, and does not fit their own personal rhythm.
 
 Kind Cloud allows you to move on exactly when you're ready.
 
@@ -40,10 +39,10 @@ Go as slowly or as quickly as you'd like.
 
 #### For individuals with noise sensitivity ⭐️
 
-Finding a voice and background sounds that suits your tastes can take time. Remove it from the equation entirely with text.
+Finding the right meditaiton voice and music can take time. Remove it from the equation entirely with text.
 
 #### For deaf and hard of hearing individuals ⭐️
 
 Audio can be a challenge for many, and completely inaccessible for others. Kind Cloud is your meditation companion.
 
-### I hope you find a meditation app that works for you! 🌈
+### Give Kind Cloud a try! If it doesn't work for you, I hope you find another meditation type that does. 🌈

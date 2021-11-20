@@ -173,7 +173,7 @@ export const StyleGlobals = createGlobalStyle`
     font-family: strokeweight;
     line-height: 1.45;
   }
-  h1,h2,h3,h4,h5,h6 {
+  h1,h3,h4,h5,h6 {
     font-weight: 160;
     margin-top: 1rem;
     text-transform: lowercase;
@@ -196,9 +196,7 @@ export const StyleGlobals = createGlobalStyle`
     line-height: 1.1;
     margin-bottom: 1rem;
     margin-top: 0;
-  }
-  h2 {
-    font-size: 2.5rem;
+    
   }
   p {
     + h3, + h4 {

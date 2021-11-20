@@ -6,9 +6,13 @@ import styled, { keyframes } from "styled-components"
 
 const Container = styled.div`
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 2rem;
   position: relative;
+  @media screen and (max-width: 800px) {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
 `
 
 const fadeUp = keyframes`
@@ -59,15 +63,13 @@ const Layout = ({ location, children }) => {
           style={{
             justifySelf: "end",
             marginTop: "max(25vh, 200px)",
-            padding: "3rem 0 8rem ",
-            fontSize: 24,
+            padding: "2rem 0 0",
+            fontSize: 16,
             fontWeight: "60",
             textAlign: "center",
           }}
         >
-          <div style={{ fontWeight: "60" }}>
-            Loving-kindness meditation app
-            <br />
+          <div style={{ fontWeight: "60", fontSize: "1.2rem" }}>
             <a
               href={"https://kindcloud.app"}
               rel="noreferrer"
@@ -78,15 +80,17 @@ const Layout = ({ location, children }) => {
                 textUnderlineOffset: "3px",
               }}
             >
-              Kind Cloud
-            </a>
+              Try Kind Cloud
+            </a>{" "}
+            - A sound-free, loving-kindness meditation app{" "}
           </div>
-          <div style={{ marginTop: "1.5rem" }}>
+          <div style={{ marginTop: ".5rem", fontSize: "1.2rem" }}>
             <a
               href={"https://www.buymeacoffee.com/kindcloud"}
               target={"_blank"}
               rel="noreferrer"
               style={{
+                fontWeight: 100,
                 textDecoration: "underline",
                 textUnderlineOffset: "3px",
               }}
@@ -94,7 +98,7 @@ const Layout = ({ location, children }) => {
               Buy Kind Cloud a Coffee 🌈 ☕️
             </a>
           </div>
-          <div style={{ marginTop: "1.5rem", fontSize: ".8em" }}>
+          <div style={{ marginTop: "2rem", ontSize: "1.2rem" }}>
             ©{new Date().getFullYear()} Shalanah Dawson
           </div>
         </footer>
