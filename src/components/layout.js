@@ -4,6 +4,13 @@ import StyleGlobals from "../styles/StyleGlobals"
 import "../styles/fonts.css"
 import styled, { keyframes } from "styled-components"
 
+const Header = styled.div`
+  font-size: 1.75rem;
+  @media screen and (max-width: 800px) {
+    font-size: 1.1rem;
+  }
+`
+
 const Container = styled.div`
   max-width: 900px;
   margin: 0 auto;
@@ -12,6 +19,17 @@ const Container = styled.div`
   @media screen and (max-width: 800px) {
     margin: 1rem auto;
     padding: 1rem;
+  }
+  footer {
+    justify-self: end;
+    margin-top: max(25vh, 200px);
+    padding: 2rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 60;
+    text-align: center;
+    @media screen and (max-width: 800px) {
+      text-align: left;
+    }
   }
 `
 
@@ -48,7 +66,12 @@ const Layout = ({ location, children }) => {
         }}
       >
         <StyleGlobals />
-        <header style={{ display: "flex", justifyContent: "space-between" }}>
+        <Header
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <span>
             {!isRootPath && (
               <LinkContainer>
@@ -57,19 +80,10 @@ const Layout = ({ location, children }) => {
             )}
           </span>
           <Link to="/">kindcloud.blog</Link>
-        </header>
+        </Header>
         <main style={{ marginTop: "15vh", flex: 1 }}>{children}</main>
-        <footer
-          style={{
-            justifySelf: "end",
-            marginTop: "max(25vh, 200px)",
-            padding: "2rem 0 0",
-            fontSize: 16,
-            fontWeight: "60",
-            textAlign: "center",
-          }}
-        >
-          <div style={{ fontWeight: "60", fontSize: "1.2rem" }}>
+        <footer>
+          <div style={{ fontWeight: "60" }}>
             <a
               href={"https://kindcloud.app"}
               rel="noreferrer"
@@ -80,11 +94,11 @@ const Layout = ({ location, children }) => {
                 textUnderlineOffset: "3px",
               }}
             >
-              Try Kind Cloud
+              Kind Cloud
             </a>{" "}
             - A sound-free, loving-kindness meditation app{" "}
           </div>
-          <div style={{ marginTop: ".5rem", fontSize: "1.2rem" }}>
+          <div style={{ marginTop: ".5rem" }}>
             <a
               href={"https://www.buymeacoffee.com/kindcloud"}
               target={"_blank"}
@@ -98,8 +112,8 @@ const Layout = ({ location, children }) => {
               Buy Kind Cloud a Coffee 🌈 ☕️
             </a>
           </div>
-          <div style={{ marginTop: "2rem", ontSize: "1.2rem" }}>
-            ©{new Date().getFullYear()} Shalanah Dawson
+          <div style={{ marginTop: "2rem" }}>
+            ©{new Date().getFullYear()} Shalanah LLC
           </div>
         </footer>
       </Container>

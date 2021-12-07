@@ -13,10 +13,7 @@ const fadeUp = keyframes`
   }
 `
 const Li = styled.li`
-  animation: ${fadeUp} ease-out 0.8s 0s both;
-  @media screen and (max-width: 800px) {
-    margin-bottom: 3rem;
-  }
+  animation: ${fadeUp} ease-out 1s 300ms both;
 `
 
 const Container = styled.div`
@@ -26,7 +23,7 @@ const Container = styled.div`
     line-height: 1.1;
     margin-bottom: 1rem;
     margin-top: 0;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     text-transform: none;
     @media screen and (max-width: 800px) {
       font-size: 2.5rem;
@@ -34,12 +31,12 @@ const Container = styled.div`
     }
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.15rem;
     margin-top: 0;
-    line-height: 1.35;
+    line-height: 1.2;
     @media screen and (max-width: 800px) {
       font-size: 1.75rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
   }
   h5 {
@@ -54,11 +51,12 @@ const Container = styled.div`
   ol {
     list-style: none;
     display: grid;
-    gap: 40;
+    gap: 40px;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr;
+      gap: 30px;
     }
   }
 `
@@ -73,11 +71,14 @@ const Posts = ({ posts, title = "Kind Cloud Blog" }) => {
           return (
             <Li
               key={post.fields.slug}
-              style={{ animationDelay: (i + 1) * 300 + "ms" }}
+              style={{ animationDelay: i * 500 + "ms" }}
             >
               <h2>
                 <Link to={post.fields.slug}>
-                  <span>{title} →</span>
+                  <span>
+                    {title}
+                    {/* {→} */}
+                  </span>
                 </Link>
               </h2>
               <h5>{post.frontmatter.date}</h5>

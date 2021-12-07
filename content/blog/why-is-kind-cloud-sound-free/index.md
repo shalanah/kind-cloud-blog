@@ -45,4 +45,4 @@ Finding the right meditaiton voice and music can take time. Remove it from the e
 
 Audio can be a challenge for many, and completely inaccessible for others. Kind Cloud is your meditation companion.
 
-### Give Kind Cloud a try! If it doesn't work for you, I hope you find another meditation type that does. 🌈
+##### Give Kind Cloud a try! If it doesn't work for you, I hope you find another meditation type that does. 🌈
