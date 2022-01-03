@@ -75,7 +75,8 @@ const Layout = ({ location, children }) => {
           <span>
             {!isRootPath && (
               <LinkContainer>
-                <Link to="/">← back to posts</Link>
+                {/* TODO: Make this go back */}
+                <Link to="/">← back</Link>
               </LinkContainer>
             )}
           </span>

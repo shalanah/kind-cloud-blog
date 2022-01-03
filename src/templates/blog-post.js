@@ -99,12 +99,16 @@ const BlogPostTemplate = ({ data, location }) => {
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <h5>
-          May you be filled with loving-kindness. 💙
+          May you be filled with loving-kindness. ❤️🌈
           <br />
           <br />
-          <a href={"https://kindcloud.app"}>
-            - Kind Cloud
-            <br />
+          - Kind Cloud
+          <br />
+          <a
+            href={"https://kindcloud.app"}
+            style={{ textDecoration: "underline", textUnderlineOffset: 3 }}
+            target={"_blank"}
+          >
             kindcloud.app
           </a>
         </h5>
@@ -112,15 +116,8 @@ const BlogPostTemplate = ({ data, location }) => {
           <span style={{ marginBottom: 20, display: "block" }}>Tags</span>
           {post.frontmatter.tags.map(tag => (
             <button
+              className="tag"
               onClick={() => navigate(`/tags/${kebabCase(tag)}`)}
-              style={{
-                fontSize: "1.1rem",
-                marginRight: 15,
-                border: "1px solid currentColor",
-                padding: ".4em 1em .5em",
-                marginBottom: ".75em",
-                borderRadius: "20px",
-              }}
             >
               <span style={{ whiteSpace: "nowrap" }}>{tag}</span>
             </button>

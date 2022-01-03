@@ -16,20 +16,21 @@ const Li = styled.li`
   animation: ${fadeUp} ease-out 1s 300ms both;
 `
 
-const Container = styled.div`
-  h1 {
-    font-size: 3.75rem;
-    max-width: 700px;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    margin-top: 0;
-    margin-bottom: 4rem;
-    text-transform: none;
-    @media screen and (max-width: 800px) {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
+export const PageTitle = styled.h1`
+  font-size: 3.75rem;
+  max-width: 700px;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  text-transform: none;
+  @media screen and (max-width: 800px) {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
+`
+
+const PostStyles = styled.div`
   h2 {
     font-size: 2.15rem;
     margin-top: 0;
@@ -63,10 +64,11 @@ const Container = styled.div`
 
 const Posts = ({ posts, title = "Kind Cloud Blog" }) => {
   return (
-    <Container>
-      <h1>{title}</h1>
+    <PostStyles>
+      <PageTitle>{title}</PageTitle>
       <ol>
         {posts.map((post, i) => {
+          console.log(post)
           const title = post.frontmatter.title || post.fields.slug
           return (
             <Li
@@ -86,7 +88,7 @@ const Posts = ({ posts, title = "Kind Cloud Blog" }) => {
           )
         })}
       </ol>
-    </Container>
+    </PostStyles>
   )
 }
 

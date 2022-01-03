@@ -100,6 +100,7 @@ module.exports = {
                 }
               }
             `,
+            title: "Kind Cloud Blog RSS Feed",
             output: "/rss.xml",
           },
         ],

@@ -15,8 +15,11 @@ const Tags = ({ pageContext, data, location }) => {
       <>
         <Seo title={`Tag ${tag}`} />
         <Posts posts={posts} title={tagHeader} />
-        {/* Instead of an all tags page... just show all the tags here */}
-        <Link to="/tags">All tags</Link>
+        <div style={{ marginTop: "2rem" }}>
+          <Link to="/tags" className="tag">
+            All tags
+          </Link>
+        </div>
       </>
     </Layout>
   )

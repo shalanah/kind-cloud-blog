@@ -197,6 +197,20 @@ export const StyleGlobals = createGlobalStyle`
     margin-bottom: 1rem;
     margin-top: 0;
   }
+
+  .tag {
+    font-size: 1.1rem;
+    margin-right: 15;
+    background: #22233e;
+    padding: .4em 1em .5em;
+    margin-bottom: .75em;
+    border-radius: 20px;
+    margin-right: 15px;
+    transition: .2s;
+    &:hover {
+      background: #313353;
+    }
+  }
   
 `
 
