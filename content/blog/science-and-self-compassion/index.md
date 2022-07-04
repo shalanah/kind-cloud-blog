@@ -1,7 +1,7 @@
 ---
-title: "Science and Loving-kindness 👩🏽‍🔬"
+title: "Studies on meditation and loving-kindness 👩🏽‍🔬"
 description: "A study backs being kind to oneself"
-date: "2020-03-18T05:35:07.322Z"
+date: "2022-06-30T05:35:07.322Z"
 tags:
   - "kindcloud"
   - "kind cloud"
@@ -15,8 +15,11 @@ tags:
   - "self-compassion"
 ---
 
-Researchers have been keenly interested in self-compassion and loving-kindness these days, which is lovely!
+Researchers have been studying the effects of self-compassion, loving-kindness, and meditation. Here are some articles and studies:
 
-One such article summarizes many of these studies in [18 Science-Backed Reasons to Try Loving-Kindness Meditation](https://www.psychologytoday.com/us/blog/feeling-it/201409/18-science-backed-reasons-try-loving-kindness-meditation)!
-
-I was going to try to summarize the article but it is so good, I think it should be read in its entirety!
+- [Psychology Today: 18 Science-Backed Reasons to Try Loving-Kindness Meditation](https://www.psychologytoday.com/us/blog/feeling-it/201409/18-science-backed-reasons-try-loving-kindness-meditation)
+- [NIH: Overview of Meditation and Mindfulness and Studies](https://www.nccih.nih.gov/health/meditation-and-mindfulness-what-you-need-to-know)
+- [Nature: Collection of Studies on Mindfulness + Meditation](https://www.nature.com/collections/ibhachifaj/)
+- [Forbes: Meditation Reduces Mind Wandering And Mistakes At Work, New Studies Show](https://www.forbes.com/sites/bryanrobinson/2022/04/04/meditation-reduces-mind-wandering-and-mistakes-at-work-new-studies-show/?sh=37c31dc7c3d0)
+- [Mayo Clinic: Meditation: A simple, fast way to reduce stress](https://www.mayoclinic.org/tests-procedures/meditation/in-depth/meditation/art-20045858)
+- [Standford: The Center for Compassion and Altruism Research and Education: Current Research](http://ccare.stanford.edu/research/current-research/)

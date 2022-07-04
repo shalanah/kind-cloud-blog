@@ -7,6 +7,7 @@ import Posts from "../components/posts"
 // Following https://www.gatsbyjs.com/docs/adding-tags-and-categories-to-blog-posts/
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
+  console.log({ pageContext })
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = (
     <span
@@ -37,6 +38,7 @@ const Tags = ({ pageContext, data, location }) => {
     </span>
   )
   const posts = edges.map(({ node }) => node)
+  console.log(posts)
   return (
     <Layout location={location}>
       <>
@@ -68,6 +70,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date(formatString: "MMMM D, YYYY")
           }
         }
       }

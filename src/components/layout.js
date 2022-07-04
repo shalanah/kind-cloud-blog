@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, navigate, history } from "gatsby"
+import { Link } from "gatsby"
 import StyleGlobals from "../styles/StyleGlobals"
 import "../styles/fonts.css"
 import styled from "styled-components"
@@ -29,13 +29,13 @@ const Container = styled.div`
   }
 `
 
-const LinkContainer = styled.div`
-  cursor: pointer;
-`
+// const LinkContainer = styled.div`
+//   cursor: pointer;
+// `
 
-const Layout = ({ location, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
+const Layout = ({ children }) => {
+  // const rootPath = `${__PATH_PREFIX__}/`
+  // const isRootPath = location.pathname === rootPath
   return (
     <div
       style={{
@@ -57,11 +57,11 @@ const Layout = ({ location, children }) => {
             justifyContent: "space-between",
           }}
         >
-          <span>
+          <span />
+          {/* <span>
             {!isRootPath && navigate.length > 1 && (
               <LinkContainer
                 onClick={() => {
-                  console.log(history)
                   navigate(-1)
                 }}
                 as="button"
@@ -69,8 +69,8 @@ const Layout = ({ location, children }) => {
                 ← back
               </LinkContainer>
             )}
-          </span>
-          <Link to="/">kindcloud.blog</Link>
+          </span> */}
+          <Link to="/">blog home</Link>
         </Header>
         <main style={{ marginTop: "15vh", flex: 1 }}>{children}</main>
         <footer>
@@ -85,7 +85,7 @@ const Layout = ({ location, children }) => {
                 textUnderlineOffset: "3px",
               }}
             >
-              Kind Cloud
+              Kind Cloud App
             </a>{" "}
             - A sound-free, loving-kindness meditation app{" "}
           </div>

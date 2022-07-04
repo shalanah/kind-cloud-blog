@@ -1,17 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
+import { heartColors } from "../utils"
 
-const heartColors = [
-  "#fc3ad8",
-  "#c53df7",
-  "#f7e522",
-  // "#fc4c46",
-  "#10f204",
-  // "#f21d2b",
-  "#11e0dc",
-  "#31a9f9",
-]
 const fadeUp = keyframes`
   from {
     opacity: 0;
@@ -29,7 +20,10 @@ const Li = styled.li`
   padding: 1.25em;
   cursor: pointer;
   animation: ${fadeUp} ease-out 0.75s 0ms both;
-  transition: 0.5s;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   &:hover {
     background: ${({ i }) => heartColors[i % heartColors.length] + "22"};
     border: 2px solid ${({ i }) => heartColors[i % heartColors.length]};
@@ -90,7 +84,11 @@ const Posts = ({ posts, title = "Kind Cloud Blog" }) => {
         {posts.map((post, i) => {
           const title = post.frontmatter.title || post.fields.slug
           return (
-            <Link to={post.fields.slug} key={post.fields.slug}>
+            <Link
+              to={post.fields.slug}
+              key={post.fields.slug}
+              style={{ display: "flex" }}
+            >
               <Li i={i} style={{ animationDelay: i * 400 + "ms" }}>
                 <h2>
                   <span>{title}</span>

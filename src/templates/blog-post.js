@@ -65,7 +65,12 @@ const Article = styled.article`
     font-size: 1.5rem;
     text-transform: none;
   }
-  p {
+  ol,
+  ul {
+    margin: 2rem 2rem;
+  }
+  p,
+  li {
     font-weight: 60;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -75,7 +80,28 @@ const Article = styled.article`
       font-size: 1.3rem;
     }
   }
-  p {
+  li {
+    margin-bottom: 1.25rem;
+    margin-top: 0rem;
+    display: flex;
+    &:before {
+      content: "•";
+      margin-right: 0.75rem;
+    }
+  }
+  strong {
+    font-weight: 160;
+  }
+  a {
+    text-decoration: underline;
+    transition: 0.2s;
+    text-underline-offset: 0.15em;
+    &:hover {
+      color: #fff;
+    }
+  }
+  p,
+  li {
     + h3,
     + h4 {
       margin-top: 3rem;
@@ -106,6 +132,7 @@ const BlogPostTemplate = ({ data, location }) => {
           —Kind Cloud
           <br />
           <a
+            rel="noreferrer"
             href={"https://kindcloud.app"}
             style={{ textDecoration: "underline", textUnderlineOffset: 3 }}
             target={"_blank"}
@@ -188,7 +215,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM D, YYYY")
         description
         tags
       }
