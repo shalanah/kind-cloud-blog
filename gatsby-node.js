@@ -69,7 +69,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Tags
   const tags = result.data.tagsGroup.group
-  console.log(JSON.stringify(tags, null, 2))
   // Make tag pages
   tags.forEach(tag => {
     createPage({
