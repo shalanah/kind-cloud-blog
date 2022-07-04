@@ -176,7 +176,6 @@ export const StyleGlobals = createGlobalStyle`
   h1,h2,h3,h4,h5,h6 {
     font-weight: 160;
     margin-top: 1rem;
-    text-transform: lowercase;
   }
   p {
     font-size: 1.8rem;

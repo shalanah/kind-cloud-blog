@@ -8,7 +8,34 @@ import Posts from "../components/posts"
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `Tag "${tag}" (${totalCount})`
+  const tagHeader = (
+    <span
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+        fontSize: ".7em", // just a little smaller than normal titles since they can get long
+        flexWrap: "wrap",
+      }}
+    >
+      <span>{`Tag "${tag}"`}</span>
+      <span
+        style={{
+          display: "inline-flex",
+          fontSize: "1em",
+          color: "#12112A",
+          background: "#A9CDF3",
+          borderRadius: "1000px",
+          minWidth: "1em",
+          height: "1em",
+          lineHeight: 0,
+          fontWeight: 160,
+        }}
+      >
+        <span style={{ margin: "auto", fontSize: ".6em" }}>{totalCount}</span>
+      </span>
+    </span>
+  )
   const posts = edges.map(({ node }) => node)
   return (
     <Layout location={location}>

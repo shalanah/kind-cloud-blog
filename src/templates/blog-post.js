@@ -25,7 +25,7 @@ const fadeUp = keyframes`
 
 const Article = styled.article`
   opacity: 0;
-  animation: ${fadeUp} ease-out 0.8s 650ms both;
+  animation: ${fadeUp} ease-out 0.8s 300ms both;
   h1 {
     font-size: 3.75rem;
     max-width: 700px;
@@ -69,7 +69,8 @@ const Article = styled.article`
     font-weight: 60;
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
+    line-height: 1.4;
     @media screen and (max-width: 800px) {
       font-size: 1.3rem;
     }
@@ -102,7 +103,7 @@ const BlogPostTemplate = ({ data, location }) => {
           May you be filled with loving-kindness. ❤️🌈
           <br />
           <br />
-          - Kind Cloud
+          —Kind Cloud
           <br />
           <a
             href={"https://kindcloud.app"}
@@ -116,6 +117,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <span style={{ marginBottom: 20, display: "block" }}>Tags</span>
           {post.frontmatter.tags.map(tag => (
             <button
+              key={tag}
               className="tag"
               onClick={() => navigate(`/tags/${kebabCase(tag)}`)}
             >

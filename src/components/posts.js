@@ -1,7 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import styled, { keyframes } from "styled-components"
+
+const heartColors = [
+  "#fc3ad8",
+  "#c53df7",
+  "#f7e522",
+  // "#fc4c46",
+  "#10f204",
+  // "#f21d2b",
+  "#11e0dc",
+  "#31a9f9",
+]
 const fadeUp = keyframes`
   from {
     opacity: 0;
@@ -13,7 +23,18 @@ const fadeUp = keyframes`
   }
 `
 const Li = styled.li`
-  animation: ${fadeUp} ease-out 1s 300ms both;
+  border: 2px solid #a9cdf3;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 1.25em;
+  cursor: pointer;
+  animation: ${fadeUp} ease-out 0.75s 0ms both;
+  transition: 0.5s;
+  &:hover {
+    background: ${({ i }) => heartColors[i % heartColors.length] + "22"};
+    border: 2px solid ${({ i }) => heartColors[i % heartColors.length]};
+    color: ${({ i }) => heartColors[i % heartColors.length]};
+  }
 `
 
 export const PageTitle = styled.h1`
@@ -52,12 +73,11 @@ const PostStyles = styled.div`
   ol {
     list-style: none;
     display: grid;
-    gap: 40px;
+    gap: 1rem;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr;
-      gap: 30px;
     }
   }
 `
@@ -68,23 +88,16 @@ const Posts = ({ posts, title = "Kind Cloud Blog" }) => {
       <PageTitle>{title}</PageTitle>
       <ol>
         {posts.map((post, i) => {
-          console.log(post)
           const title = post.frontmatter.title || post.fields.slug
           return (
-            <Li
-              key={post.fields.slug}
-              style={{ animationDelay: i * 500 + "ms" }}
-            >
-              <h2>
-                <Link to={post.fields.slug}>
-                  <span>
-                    {title}
-                    {/* {→} */}
-                  </span>
-                </Link>
-              </h2>
-              <h5>{post.frontmatter.date}</h5>
-            </Li>
+            <Link to={post.fields.slug} key={post.fields.slug}>
+              <Li i={i} style={{ animationDelay: i * 400 + "ms" }}>
+                <h2>
+                  <span>{title}</span>
+                </h2>
+                <h5>{post.frontmatter.date}</h5>
+              </Li>
+            </Link>
           )
         })}
       </ol>

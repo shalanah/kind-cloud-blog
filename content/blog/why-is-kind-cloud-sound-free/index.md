@@ -17,7 +17,7 @@ tags:
   - "noise sensitivities"
 ---
 
-There are lots of meditation apps out there, and with good reason.
+There are lots of meditation apps out there - and for good reason.
 
 Meditation has proven to help [relieve anxiety and depression](https://www.npr.org/sections/health-shots/2014/01/07/260470831/mindfulness-meditation-can-help-relieve-anxiety-and-depression) and may have other benefits too.
 
@@ -45,4 +45,4 @@ Finding the right meditaiton voice and music can take time. Remove it from the e
 
 Audio can be a challenge for many, and completely inaccessible for others. Kind Cloud is your meditation companion.
 
-##### Give Kind Cloud a try! If it doesn't work for you, I hope you find another meditation type that does. 🌈
+Give Kind Cloud a try! If it doesn't work for you, I hope you find another meditation type that does.

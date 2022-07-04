@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, navigate, history } from "gatsby"
 import StyleGlobals from "../styles/StyleGlobals"
 import "../styles/fonts.css"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 const Header = styled.div`
   font-size: 1.75rem;
@@ -22,30 +22,15 @@ const Container = styled.div`
   }
   footer {
     justify-self: end;
-    margin-top: max(25vh, 200px);
+    margin-top: max(15vh, 150px);
     padding: 2rem 0 0;
     font-size: 1.2rem;
     font-weight: 60;
-    text-align: center;
-    @media screen and (max-width: 800px) {
-      text-align: left;
-    }
-  }
-`
-
-const fadeUp = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-   opacity: 1;
-   transform: translateY(0px);
   }
 `
 
 const LinkContainer = styled.div`
-  animation: ${fadeUp} ease-out 0.8s 0ms both;
+  cursor: pointer;
 `
 
 const Layout = ({ location, children }) => {
@@ -73,10 +58,15 @@ const Layout = ({ location, children }) => {
           }}
         >
           <span>
-            {!isRootPath && (
-              <LinkContainer>
-                {/* TODO: Make this go back */}
-                <Link to="/">← back</Link>
+            {!isRootPath && navigate.length > 1 && (
+              <LinkContainer
+                onClick={() => {
+                  console.log(history)
+                  navigate(-1)
+                }}
+                as="button"
+              >
+                ← back
               </LinkContainer>
             )}
           </span>
@@ -99,7 +89,9 @@ const Layout = ({ location, children }) => {
             </a>{" "}
             - A sound-free, loving-kindness meditation app{" "}
           </div>
-          <div style={{ marginTop: ".5rem" }}>
+          <div style={{ marginTop: "1.5rem" }}>
+            Keep Kind Cloud Alive
+            <br />
             <a
               href={"https://www.buymeacoffee.com/kindcloud"}
               target={"_blank"}
@@ -114,7 +106,7 @@ const Layout = ({ location, children }) => {
             </a>
           </div>
           <div style={{ marginTop: "2rem" }}>
-            ©{new Date().getFullYear()} Shalanah LLC
+            ©2020–{new Date().getFullYear()} Shalanah LLC
           </div>
         </footer>
       </Container>
