@@ -3,7 +3,7 @@ import { Link, graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled, { keyframes } from "styled-components"
-import kebabCase from "lodash/kebabcase"
+import kebabCase from "lodash.kebabcase"
 
 const Pag = styled.ul`
   font-size: 22px;

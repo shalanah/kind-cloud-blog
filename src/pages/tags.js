@@ -2,7 +2,7 @@ import React from "react"
 import Seo from "../components/seo"
 import { navigate, graphql } from "gatsby"
 import Layout from "../components/layout"
-import kebabCase from "lodash/kebabcase"
+import kebabCase from "lodash.kebabcase"
 import { PageTitle } from "../components/posts"
 
 // Following https://www.gatsbyjs.com/docs/adding-tags-and-categories-to-blog-posts/
