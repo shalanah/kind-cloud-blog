@@ -110,6 +110,21 @@ const Layout = ({ children }) => {
           </div>
         </footer>
       </Container>
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+            var sc_project = 12456776;
+            var sc_invisible = 1;
+            var sc_security = '1d702d3f';
+            `,
+        }}
+      />
+      <script
+        type="text/javascript"
+        src="https://www.statcounter.com/counter/counter.js"
+        async
+      />
     </div>
   )
 }
