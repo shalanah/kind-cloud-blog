@@ -29,10 +29,6 @@ const Container = styled.div`
   }
 `
 
-// const LinkContainer = styled.div`
-//   cursor: pointer;
-// `
-
 const Layout = ({ children }) => {
   // const rootPath = `${__PATH_PREFIX__}/`
   // const isRootPath = location.pathname === rootPath
@@ -57,19 +53,11 @@ const Layout = ({ children }) => {
             justifyContent: "space-between",
           }}
         >
-          <span />
-          {/* <span>
-            {!isRootPath && navigate.length > 1 && (
-              <LinkContainer
-                onClick={() => {
-                  navigate(-1)
-                }}
-                as="button"
-              >
-                ← back
-              </LinkContainer>
-            )}
-          </span> */}
+          <span>
+            <a href="https://kindcloud.app" as="a">
+              ← kindcloud.app
+            </a>
+          </span>
           <Link to="/">blog home</Link>
         </Header>
         <main style={{ marginTop: "15vh", flex: 1 }}>{children}</main>
